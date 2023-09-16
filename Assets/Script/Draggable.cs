@@ -38,8 +38,7 @@ public class Draggable : MonoBehaviour
     private void OnMouseUp()
     {
         isDragged = false;
-        //if object dragged onto object
-        //delete this object
+        dragEndedCallback(this);
 
     }
 }
