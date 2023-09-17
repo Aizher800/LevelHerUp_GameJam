@@ -30,7 +30,6 @@ public class ObjectSnap : MonoBehaviour
             {
                 closestSnapPoint = snapPoint;
                 closestDistance = currentDistance;
-
             }
         }
 
