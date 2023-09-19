@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class Draggable : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     public delegate void DragEndedDelegate(Draggable draggableObject);
-
     public DragEndedDelegate dragEndedCallback;
 
     private bool isDragged = false;
@@ -15,14 +12,12 @@ public class Draggable : MonoBehaviour
     private Vector3 dragSpriteStartPos;
 
     public List<Transform> children = new List<Transform>();
-    public List<Vector2> childrenOffsets = new List<Vector2>();
-   
+    private List<Vector2> childrenOffsets = new List<Vector2>();
 
-
-    void Start()
+    private void Start()
     {
         // Find all the offsets of each child to the parent center
-        foreach(Transform child in children)
+        foreach (Transform child in children)
         {
             childrenOffsets.Add(child.position - transform.position);
         }
@@ -30,12 +25,13 @@ public class Draggable : MonoBehaviour
 
     private void OnMouseDown()
     {
-        isDragged = true; // Starts drag
-        dragStartPos = Camera.main.ScreenToWorldPoint(Input.mousePosition); //translate mouse pos to screen pos
+        isDragged = true;
+        dragStartPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         dragSpriteStartPos = transform.localPosition;
 
         ToggleColliders(false);
     }
+
     private void OnMouseDrag()
     {
         if (isDragged)
@@ -47,15 +43,17 @@ public class Draggable : MonoBehaviour
     private void OnMouseUp()
     {
         isDragged = false;
-        dragEndedCallback(this);
 
-        if(CanPlaceHere())
+        // Check if the callback is assigned before invoking it
+        dragEndedCallback.Invoke(this);
+
+        if (CanPlaceHere())
         {
             // do nothing
         }
         else
         {
-            // Return to original pos
+            // Return to the original position
             transform.localPosition = dragSpriteStartPos;
         }
 
@@ -64,7 +62,7 @@ public class Draggable : MonoBehaviour
 
     private bool CanPlaceHere()
     {
-        foreach(Vector2 offset in childrenOffsets)
+        foreach (Vector2 offset in childrenOffsets)
         {
             Vector2 checkPosition = new Vector2(transform.position.x + offset.x, transform.position.y + offset.y);
             RaycastHit2D hit = Physics2D.Raycast(checkPosition, -Vector2.up);
@@ -80,10 +78,19 @@ public class Draggable : MonoBehaviour
 
     private void ToggleColliders(bool state)
     {
-        transform.GetComponent<BoxCollider2D>().enabled = state;
-        foreach(Transform child in children)
+        var parentCollider = transform.GetComponent<BoxCollider2D>();
+        if (parentCollider != null)
         {
-            child.GetComponent<BoxCollider2D>().enabled = state;
+            parentCollider.enabled = state;
+        }
+
+        foreach (Transform child in children)
+        {
+            var childCollider = child.GetComponent<BoxCollider2D>();
+            if (childCollider != null)
+            {
+                childCollider.enabled = state;
+            }
         }
     }
 }

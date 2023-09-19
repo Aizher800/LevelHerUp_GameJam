@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6367616917762593179}
   m_Layer: 0
   m_Name: Circle (11)
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 2600797586459331349}
   m_Layer: 0
   m_Name: Circle (14)
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 1509410357861078973}
   m_Layer: 0
   m_Name: Circle (2)
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 4471397886669772533}
   m_Layer: 0
   m_Name: Circle (12)
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -348,7 +348,7 @@ GameObject:
   - component: {fileID: 5178761259474022286}
   m_Layer: 0
   m_Name: Circle (6)
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 4257391288112675020}
   m_Layer: 0
   m_Name: Circle (8)
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -516,7 +516,7 @@ GameObject:
   - component: {fileID: 7059706724924615485}
   m_Layer: 0
   m_Name: Circle (3)
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -600,7 +600,7 @@ GameObject:
   - component: {fileID: 4114102599315035521}
   m_Layer: 0
   m_Name: Circle (9)
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 6840161120218800985}
   m_Layer: 0
   m_Name: Circle (10)
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -768,7 +768,7 @@ GameObject:
   - component: {fileID: 352942573116856502}
   m_Layer: 0
   m_Name: Circle (13)
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -898,7 +898,7 @@ GameObject:
   - component: {fileID: 1785679088654089578}
   m_Layer: 0
   m_Name: Circle (5)
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -983,7 +983,7 @@ GameObject:
   - component: {fileID: 3033360838495278715}
   m_Layer: 0
   m_Name: Circle (4)
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1102,7 +1102,7 @@ GameObject:
   - component: {fileID: 7430251579946865141}
   m_Layer: 0
   m_Name: Circle (1)
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1186,7 +1186,7 @@ GameObject:
   - component: {fileID: 1840560060994688393}
   m_Layer: 0
   m_Name: Circle (7)
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1270,7 +1270,7 @@ GameObject:
   - component: {fileID: 5752833154843374121}
   m_Layer: 0
   m_Name: Circle
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

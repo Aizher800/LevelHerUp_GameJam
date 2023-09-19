@@ -272,9 +272,9 @@ GameObject:
   - component: {fileID: 3083979467893842424}
   - component: {fileID: 8046564997148412508}
   - component: {fileID: 3777711525339635977}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cross Piece
-  m_TagString: Untagged
+  m_TagString: ParentObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

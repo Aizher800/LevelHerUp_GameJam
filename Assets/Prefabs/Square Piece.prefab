@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2448265837289478985}
   - component: {fileID: 6513998331005416689}
   - component: {fileID: 5035344141940551287}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square Piece
-  m_TagString: Untagged
+  m_TagString: ParentObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

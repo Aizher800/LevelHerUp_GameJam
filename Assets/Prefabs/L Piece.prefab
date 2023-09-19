@@ -272,9 +272,9 @@ GameObject:
   - component: {fileID: 7150591778168190356}
   - component: {fileID: 4554663389909340685}
   - component: {fileID: 3472349576419731341}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: L Piece
-  m_TagString: Untagged
+  m_TagString: ParentObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
