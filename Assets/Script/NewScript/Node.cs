@@ -25,7 +25,7 @@ public class Node : MonoBehaviour
         this.gameObject.transform.parent = parent.transform;
         visual = GameObject.CreatePrimitive(PrimitiveType.Quad);
         visual.transform.parent = this.gameObject.transform;
-        this.gameObject.transform.position = new Vector2(xpos, ypos);
+        this.gameObject.transform.localPosition = new Vector2(xpos, ypos);
         visual.transform.localScale = new Vector2(0.9f, 0.9f);
 
     }
@@ -35,6 +35,11 @@ public class Node : MonoBehaviour
         colliderObj.enabled = true;
         colliderObj.isTrigger = true;
         colliderObj.size = new Vector2(0.99f, 0.99f);
+    }
+
+    public bool IsNodeFilled() 
+    {
+        return isFilled;
     }
 
 }
