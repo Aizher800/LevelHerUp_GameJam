@@ -8,6 +8,7 @@ public class Board : MonoBehaviour
     int yBoardDimension = 3;
     
     List<GameObject> nodes = null;
+    List<GameObject> pieces = new List<GameObject>();
 
 
     // Start is called before the first frame update
@@ -24,6 +25,7 @@ public class Board : MonoBehaviour
                 nodes.Add(nodeobj);
             }
         }
+
     }
 
     // Update is called once per frame
