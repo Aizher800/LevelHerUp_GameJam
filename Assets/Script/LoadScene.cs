@@ -18,7 +18,7 @@ public class LoadScene : MonoBehaviour
 
     IEnumerator DelayLoseLoad()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         Restart();
     }
     //Loads scene from Home to MainGame

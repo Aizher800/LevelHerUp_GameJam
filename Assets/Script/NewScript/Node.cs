@@ -71,7 +71,9 @@ public class Node : MonoBehaviour
 
         if (prefab != null)
         {
-            visual = Instantiate(prefab, this.transform.position, Quaternion.identity);
+            var newPosition = this.transform.position;
+            newPosition.z += 1;
+            visual = Instantiate(prefab, newPosition, Quaternion.identity);
             if (visual == null) 
             {
                 Debug.LogError("disabled visual failed to create");

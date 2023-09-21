@@ -28,6 +28,8 @@ public class Piece : MonoBehaviour
         isDragged = true;
         dragStartPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         dragSpriteStartPos = this.transform.localPosition;
+
+        MovePiece(-1);
     }
 
 
@@ -45,6 +47,7 @@ public class Piece : MonoBehaviour
             return;
         }
         isDragged = false;
+        MovePiece(1);
         Debug.Log("Mouse Up");
 
         if (AreAllSegmentsConnected())
@@ -58,6 +61,7 @@ public class Piece : MonoBehaviour
                 }
                 child.DestroyNodeCollider();
             }
+            MovePiece(1);
         }
         else
         {
@@ -82,6 +86,13 @@ public class Piece : MonoBehaviour
             }
         }
         return true;
+    }
+
+    void MovePiece(int z)
+    {
+        var newPosition = this.transform.position;
+        newPosition.z += z;
+        this.transform.position = newPosition;
     }
 
 }

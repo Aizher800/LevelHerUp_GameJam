@@ -22,7 +22,7 @@ public class OverlaySpawner : MonoBehaviour
 
     public void ToggleOverlayButton()
     {    
-    overlayCanvas.SetActive(!overlayCanvas.gameObject.activeSelf);
+    overlayCanvas.SetActive(overlayCanvas.gameObject.activeSelf);
     }
 
 }

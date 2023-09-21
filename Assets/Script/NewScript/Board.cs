@@ -12,6 +12,8 @@ public class Board : MonoBehaviour
 
     public bool HasGameBeenWon { get; private set; } = false;
 
+    public GameObject winScreen;
+
 
     // Start is called before the first frame update
     void Start()
@@ -36,8 +38,9 @@ public class Board : MonoBehaviour
         HasGameBeenWonCheck();
         if (HasGameBeenWon)
         {
-            SceneLoader("Home");
             // Insert load scene here
+            winScreen.SetActive(true);
+            StartCoroutine(DelayWinLoad());           
         }
     }
 
@@ -75,6 +78,22 @@ public class Board : MonoBehaviour
         public void SceneLoader(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
-    
+    }
+
+    IEnumerator DelayWinLoad()
+    {
+        ShowWinImage();
+        yield return new WaitForSeconds(3f);
+        HomePage();
+    }
+    private void HomePage()
+    {
+        SceneLoader("Home");
+        Debug.Log("Yo. You've won the game, dawg.");
+    }
+
+    public void ShowWinImage()
+    {
+
     }
 }
