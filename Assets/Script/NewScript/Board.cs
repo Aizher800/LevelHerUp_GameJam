@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Board : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class Board : MonoBehaviour
     int yBoardDimension = 3;
     
     List<GameObject> nodes = null;
+
+    public bool HasGameBeenWon { get; private set; } = false;
 
 
     // Start is called before the first frame update
@@ -24,7 +27,54 @@ public class Board : MonoBehaviour
                 nodes.Add(nodeobj);
             }
         }
-
+        DisableBoardNodeAt(1, 0);
+        DisableBoardNodeAt(7, 1);
     }
 
+    void Update()
+    {
+        HasGameBeenWonCheck();
+        if (HasGameBeenWon)
+        {
+            SceneLoader("Home");
+            // Insert load scene here
+        }
+    }
+
+    void DisableBoardNodeAt(int xpos, int ypos) 
+    {
+        foreach (var nodeObj in nodes) 
+        {
+            var node = nodeObj.GetComponent<Node>();
+            if (node.XPostion == xpos && node.YPostion == ypos)
+            {
+                Debug.Log("Node has been found disable");
+                node.SetNodeBlocked();
+            }
+        }
+    }
+
+    void HasGameBeenWonCheck() 
+    {
+        if (!HasGameBeenWon)
+        {
+            bool isGameWon = true;
+            foreach (var nodeObj in nodes)
+            {
+                var node = nodeObj.GetComponent<Node>();
+                if (!node.IsNodeFilled())
+                {
+                    isGameWon = false;
+                    break;
+                }
+            }
+            HasGameBeenWon = isGameWon;
+        }
+    }
+
+        public void SceneLoader(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    
+    }
 }

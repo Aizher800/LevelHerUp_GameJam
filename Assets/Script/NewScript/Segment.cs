@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Segment : MonoBehaviour
 {
+
+    bool isDebugEnabled = false; 
     bool firstUpdate = true;
 
     List<GameObject> connectedNodes = new List<GameObject>();
@@ -30,14 +32,22 @@ public class Segment : MonoBehaviour
         }
     }
 
-    void Update() 
+    void Update()
     {
-        if (connectedNodes.Count == 0) {
-            this.GetComponent<Renderer>().material.color = Color.green;
-        } else if (connectedNodes.Count == 1) {
-            this.GetComponent<Renderer>().material.color = Color.yellow;
-        } else {
-            this.GetComponent<Renderer>().material.color = Color.red;
+        if (isDebugEnabled)
+        {
+            if (connectedNodes.Count == 0)
+            {
+                this.GetComponent<Renderer>().material.color = Color.green;
+            }
+            else if (connectedNodes.Count == 1)
+            {
+                this.GetComponent<Renderer>().material.color = Color.yellow;
+            }
+            else
+            {
+                this.GetComponent<Renderer>().material.color = Color.red;
+            }
         }
     }
 

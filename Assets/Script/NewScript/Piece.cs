@@ -8,11 +8,6 @@ public class Piece : MonoBehaviour
     private Vector3 dragStartPos;
     private Vector3 dragSpriteStartPos;
 
-    public float forceAmount = 500;
-
-    public delegate void DragEndedDelegate(Piece draggableObject);
-    public DragEndedDelegate dragEndedCallback;
-
     [SerializeField]
     private bool isDragged = false;
     private bool isLocked = false;
@@ -51,8 +46,6 @@ public class Piece : MonoBehaviour
         }
         isDragged = false;
         Debug.Log("Mouse Up");
-        // Check if the callback is assigned before invoking it
-        //dragEndedCallback.Invoke(this);
 
         if (AreAllSegmentsConnected())
         {
@@ -62,8 +55,8 @@ public class Piece : MonoBehaviour
                     Debug.Log("Child found");
                     this.transform.position = child.GetNodeConnectedPoint();
                     isLocked = true;
-                    return;
                 }
+                child.DestroyNodeCollider();
             }
         }
         else
