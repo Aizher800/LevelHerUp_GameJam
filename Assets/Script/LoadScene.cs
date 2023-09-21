@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Overlays;
+//using UnityEditor.Overlays;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,7 +18,7 @@ public class LoadScene : MonoBehaviour
 
     IEnumerator DelayLoseLoad()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         Restart();
     }
     //Loads scene from Home to MainGame
@@ -32,11 +32,5 @@ public class LoadScene : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Debug.Log("Yo. You've restarted the game, dawg.");
-    }
-
-    public void EndGame()
-    {
-        Debug.Log("Yo. You clicked the quit button, dawg.");
-        Application.Quit();
     }
 }
