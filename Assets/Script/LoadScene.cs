@@ -33,10 +33,4 @@ public class LoadScene : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Debug.Log("Yo. You've restarted the game, dawg.");
     }
-
-    public void EndGame()
-    {
-        Debug.Log("Yo. You clicked the quit button, dawg.");
-        Application.Quit();
-    }
 }

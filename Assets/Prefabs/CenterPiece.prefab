@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 64ea934477e79aa4f801f3b43efb775b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 90e827b9315331a499423bfd6c216426, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -185,7 +185,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3511394086187038053}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -219,7 +219,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 64ea934477e79aa4f801f3b43efb775b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 90e827b9315331a499423bfd6c216426, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -242,6 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89b2db867b04dd0418917196322ae42d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  forceAmount: 500
+  isDragged: 0
 --- !u!61 &8130358419709260550
 BoxCollider2D:
   m_ObjectHideFlags: 0

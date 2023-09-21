@@ -296,8 +296,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8633399601856418624}
   - component: {fileID: 7150591778168190356}
+  - component: {fileID: 7179829097434321480}
   - component: {fileID: 4554663389909340685}
-  - component: {fileID: 4167683000328328434}
   m_Layer: 6
   m_Name: DownSideLPiece
   m_TagString: ParentObj
@@ -330,7 +330,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6946631821429586926}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -375,6 +375,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7179829097434321480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6946631821429586926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b2db867b04dd0418917196322ae42d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceAmount: 500
+  isDragged: 0
 --- !u!61 &4554663389909340685
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -420,18 +434,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4167683000328328434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6946631821429586926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 757b15a74d8378e40b32439cd7b305c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7790662680608499766
 GameObject:
   m_ObjectHideFlags: 0
