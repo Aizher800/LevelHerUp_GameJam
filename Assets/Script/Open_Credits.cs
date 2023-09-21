@@ -13,7 +13,7 @@ public class Open_Credits : MonoBehaviour
 
     public void ToggleCreditsButton()
     {
-        overlayCredits.SetActive(!overlayCredits.gameObject.activeSelf);
+        overlayCredits.SetActive(true);
         Debug.Log("Clicked Credits button");
     }
 

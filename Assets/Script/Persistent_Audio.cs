@@ -8,6 +8,9 @@ public class Persistent_Audio : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+        Debug.Log("Audio has initialised");
+        // MEANS AUDIO DOESN'T STOP UPON NEW SCENE OPENING/LEVEL RESTARTING
+        // - FROM LIBBY
     }
 
     // Update is called once per frame

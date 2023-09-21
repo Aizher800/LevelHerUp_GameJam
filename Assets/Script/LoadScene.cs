@@ -12,8 +12,8 @@ public class LoadScene : MonoBehaviour
     {
         LoseScreen.SetActive(true);
         StartCoroutine(DelayLoseLoad());
-        Debug.Log("You've pressed the restart button");
-        Debug.Log("Please wait for 3 seconds");
+        Debug.Log("Clicked Restart button, lost game");
+        Debug.Log("Please for 3 seconds until level restarts");
     }
 
     IEnumerator DelayLoseLoad()
@@ -35,7 +35,7 @@ public class LoadScene : MonoBehaviour
 
     public void EndGame()
     {
-        Debug.Log("Yo. You clicked the quit button, dawg.");
+        Debug.Log("Clicked Quit button");
         Application.Quit();
     }
 }
